@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--Write script in head-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function myFunction(){
+            document.getElementById("demo")
+                    .innerHTML="My First JavaScript Function in Head";
+        }
+    </script>
+</head>
+<body>
+    <h1>My Web Page</h1>
+    <p id="demo">A Paragraph.</p>
+    <button type="button" onclick="myFunction()">点击这里</button>
+
+    <!-- Write script in body-->
+    <script>
+        function myFunction1(){
+            document.getElementById("demo")
+                    .innerHTML="My JavaScript Function in body";
+        }
+    </script>
+    <button type="button" onclick="myFunction1()">点击这里</button>
+</body>
+</html>
