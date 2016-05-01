@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var x
+
+        function myFunction(var1,var2){
+            alert("Welcome " + var1 + " ,the " +var2 + " myFunction2=" + myFunction1() )
+        }
+
+        function myFunction1(){
+            var x = 5;
+            return x;
+        }
+
+        function myFunction2(var1,var2){
+            return var1 * var2;
+        }
+
+        function myFunction3(a,b){
+            document.getElementById("demo").innerHTML = myFuction2(a,b);
+        }
+
+        function myFunction4(a,b){
+            if(a > b){
+                alert("a > b");
+                return;
+            }
+            x = a + b;
+        }
+
+        function myFunction5(a,b){
+            x = myFunction4(a,b);
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="myFunction('Bill','CEO')">
+        点击这里
+    </button>
+    <p id="demo">啊</p>
+    <script>
+        document.getElementById("demo").innerHTML = myFunction1();
+    </script>
+    <br/>
+    <button type="button" onclick="myFunction3(2,3)">点击这里</button>
+    <br/>
+    <button type="button" onclick="myFunction5(4,3)">点击这里</button>
+</body>
+</html>
