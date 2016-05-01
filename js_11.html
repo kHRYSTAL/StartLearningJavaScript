@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--通过DOM 改变Html-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        document.write(Date())
+    </script>
+
+    <p id="p1">Hello World</p>
+    <script>
+        document.getElementById("p1").innerHTML = "New Text";
+    </script>
+
+    <h1 id="header">OldHeader</h1>
+    <script>
+        var element = document.getElementById("header");
+        element.innerHTML = "New Header";
+    </script>
+
+    <br>
+    <img src="img/eg_bulbon.gif" id="image">
+    <script>
+        document.getElementById("image")
+                .src = "img/eg_bulboff.gif";
+    </script>
+</body>
+</html>
