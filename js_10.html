@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p id="intro">Hello World!</p>
+    <!--y[0]-->
+    <p>本例演示<b>getElementById</b>方法！</p>
+    <!--y[1]-->
+    <script>
+        x = document.getElementById("intro");
+        document.write('<p>id="intro"的段落文本是'+ x +'</p>');//y[2]
+    </script>
+
+<!---->
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>本例演示<b>getElementsByTagName</b>方法</p>
+    </div>
+
+    <script>
+        var x = document.getElementById("main");
+        var y = document.getElementsByTagName("p");
+
+        document.write(
+                'id为“main”的div中的第一段文本是：'
+                + y[3].innerHTML
+        );
+    </script>
+</body>
+</html>
