@@ -23,8 +23,11 @@
     <script>
         function myFunction(){
             var carname = "Volvo";
+            var y = 5;
+            var x = y+2;
+            var carname;//若变量有值 重新声明无效
             document.getElementById("demo")
-                    .innerHTML=carname;
+                    .innerHTML=carname + x;
         }
     </script>
 </body>
