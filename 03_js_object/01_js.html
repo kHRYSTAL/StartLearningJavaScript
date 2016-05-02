@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+
+    <script>
+        var message = "Hello World";
+        var x = message.length;
+        document.getElementById("p1").innerHTML = x;
+
+        var y = message.toUpperCase();
+        document.getElementById("p2").innerHTML = y;
+    </script>
+
+<!--构造对象-->
+    <script>
+        function person(firstname,lastname,age,eyecolor){
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+            this.change = change;
+
+            function change(name){
+                this.lastname = name;
+            }
+        }
+
+        var myFather = new person("Bill","Gates",56,"blue");
+        var myMother = new person("Steve","Jobs",48,"green");
+
+        myMother.change("Ballmer");
+        document.getElementById("p3").innerHTML = myMother.lastname;
+
+
+        var a;
+        var txt = "";
+        var person = {fname:"Bill",lname:"Gates",age:56};
+
+        for(a in person){
+            txt = txt + person[a];
+        }
+
+        document.getElementById("p4").innerHTML = txt;
+
+    </script>
+</body>
+</html>
