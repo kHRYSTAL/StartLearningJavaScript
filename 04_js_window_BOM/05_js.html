@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Window PopupAlert-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function onConfirm(){
+            var result = confirm('文本')
+            if(result){
+                alert('click OK')
+            }
+        }
+
+        function onPrompt(){
+            var name=prompt('请输入您的名字','Bill Gates')
+            if (name!=null && name!='')
+            {
+                document.write('你好！' + name + ' 今天过得怎么样？')
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="alert('文本')">alert</button>
+    <br/>
+    <button type="button" onclick="onConfirm()">confirm</button>
+    <br/>
+    <button type="button" onclick="onPrompt()">prompt</button>
+</body>
+</html>
