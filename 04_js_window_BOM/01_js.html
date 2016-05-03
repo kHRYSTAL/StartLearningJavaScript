@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--get browser height and width-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function openClick(){
+            window.open("http://www.baidu.com");
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="openClick()">open</button>
+    <button type="button" onclick="window.close()">close</button>
+
+    <!-- window.moveTo-->
+    <!-- window.resizeTo-->
+    <script>
+        //chrome firefox opera safari||IE 5678||other
+        var w = window.innerWidth||
+                        document.documentElement.clientWidth||
+                        document.body.clientWidth
+        var h = window.innerHeight||
+                        document.documentElement.clientHeight||
+                        document.body.clientHeight
+
+        document.write("width:"+w+",height"+h);
+        document.write("<br/>");
+        document.write("可用宽度："+screen.availWidth+",可用高度："+screen.availHeight);
+    </script>
+</body>
+</html>
