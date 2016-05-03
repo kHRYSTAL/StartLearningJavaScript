@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--js array-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var myArray = new Array();
+        myArray[0] = "Saab";
+        myArray[1] = "Volvo";
+        myArray[2] = "BMW";
+
+        var myArray1 = new Array(3);
+        //fix length
+
+        var myArray2 = new Array("Saab","Volvo","BMW");
+
+        document.write(myArray[0]);
+
+        myArray[0] = "Opel";
+        document.write("<br/>"+myArray[0]);
+        document.write("<br/>");
+        document.write(myArray.join());
+        document.write("<br />");
+        document.write(myArray.join("."));
+        document.write("<br />");
+        document.write(myArray1.concat(myArray2));
+    </script>
+</body>
+</html>

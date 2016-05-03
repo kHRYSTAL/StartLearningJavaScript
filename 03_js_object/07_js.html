@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--RegExp-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //find "e"
+        var patt1 = new RegExp("e");
+        document.write(patt1.test("The best things in life are free"));//true
+        document.write("<br/>");
+        var patt1=new RegExp("e");
+        //if find return e else return true
+        document.write(patt1.exec("The best things in life are free"));
+        document.write("<br/>");
+        //find global
+        var patt1=new RegExp("e","g");
+        do
+        {
+            result=patt1.exec("The best things in life are free");
+            document.write(result);
+        }
+        while (result!=null)
+
+        document.write("<br/>");
+        //change find
+        var patt1=new RegExp("e");
+
+        document.write(patt1.test("The best things in life are free"));
+
+        patt1.compile("d");
+
+        document.write(patt1.test("The best things in life are free"));
+        //truefalse
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Js Date-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 显示一个钟表-->
+    <script>
+        function startTime(){
+            var today = new Date();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+
+            minutes = checkTime(minutes);
+            seconds = checkTime(seconds);
+
+            document.getElementById('txt')
+                    .innerHTML = hours + ":" + minutes + ":" + seconds
+
+            t = setTimeout('startTime()',500);
+        }
+
+
+        function checkTime(i){
+            if(i<10) {
+                i = "0" + i;
+            }
+                return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+        <script>
+            var myDate = new Date();
+            myDate.getTime();//1970.1.1-now Timemillions
+            myDate.setFullYear(2016,5,3);
+            myDate.setDate(myDate.getDate()+5);
+
+
+            var nextDay = new Date().getDate()+1;
+            if(nextDay>myDate){
+                alert("nextDay > myDate");
+            }else{
+                alert("nextDay < myDate");
+            }
+            myDate.toUTCString();
+            var day = myDate.getDay();
+        </script>
+
+    <div id="txt"></div>
+
+</body>
+</html>
